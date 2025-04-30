@@ -25,7 +25,7 @@ const App = app => {
         }
     });
 
-    app.DELETE('/api/app/uninstall', async (req, res) => {
+    app.delete('/api/app/uninstall', async (req, res) => {
         const { siteName, appName } = req.body;
         const socketId = req.headers['x-socket-id'];
 
@@ -46,7 +46,7 @@ const App = app => {
         }
     });
 
-    app.PUT('/api/app/clone', async (req, res) => {
+    app.put('/api/app/clone', async (req, res) => {
         const { gitURL } = req.body;
         const socketId = req.headers['x-socket-id'];
 
